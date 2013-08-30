@@ -16,6 +16,10 @@ public class Svv01 {
     public static String checkTriType (int a, int b, int c){
     
         String triTypeString = "";
+        
+        if(a<=0 || b<=0 || c<=0 || a>b+c || b > a+c || c>a+b){
+            triTypeString = "Invalid Triangle !!";
+        }
         if(a==b && b==c && a==c){
             triTypeString = "Equilateral Triangle";
         }
@@ -25,9 +29,7 @@ public class Svv01 {
         else if(a!=b && b!=c && a!=c){
             triTypeString = "Scalene Triangle";
         }
-        if(a<=0 && b<=0 && c<=0){
-            triTypeString = "Invalid Triangle !!";
-        }
+        
         return triTypeString;
         
        
